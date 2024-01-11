@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GENESIS - Speech Emotion Recognition</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+      integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.2/css/font-awesome.min.css"/>
+</head>
+
+<body>
+    <section class="main">
+        <div class="image-container">
+            <div class="image">
+                <img src="gif.gif" alt="image">
+            </div>
+            <h1>G E N E S I S.</h1>
+            <p>I comprehend emotions, and I'm here to help.</p>
+        </div>
+        <div class="audio-recording-container">
+            <i class="start-recording-button fa fa-microphone fa-3x" aria-hidden="true"></i>
+            <div class="recording-contorl-buttons-container hide">
+                <i class="cancel-recording-button fa fa-times-circle-o fa-3x" aria-hidden="true"></i>
+                <div class="recording-elapsed-time">
+                    <i class="red-recording-dot fa fa-circle fa-lg" aria-hidden="true"></i>
+                    <p class="elapsed-time"></p>
+                </div>
+                <i class="stop-recording-button fa fa-stop-circle-o fa-3x" aria-hidden="true"></i>
+            </div>
+            <div class="text-indication-of-audio-playing-container">
+                <p class="text-indication-of-audio-playing hide">Audio is playing<span>.</span><span>.</span><span>.</span></p>
+            </div>
+        </div>
+        <div class="overlay hide">
+            <div class="browser-not-supporting-audio-recording-box">
+                <p>To record audio, use browsers like Chrome and Firefox that support audio recording.</p>
+                <button type="button" class="close-browser-not-supported-box">Ok.</button>
+            </div>
+        </div>
+    
+        <audio controls class="audio-element hide">
+        </audio>
+        <div style="width:100%;">
+            <span id="span1" style="float:left; display:inline; color: aliceblue;"></span>
+            <span id="span2" style="float:left; display:inline; color: aliceblue;"></span>
+        </div>
+    </section>
+
+    <script src="audio.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs-core"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs-backend-cpu"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs-tflite@0.0.1-alpha.8/dist/tf-tflite.min.js"></script>
+</body>
+
+</html>
